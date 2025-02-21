@@ -84,7 +84,7 @@
         <!-- link font -->
         <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
         <!-- link css -->
-        <link rel="stylesheet" href="./assets/css/base/main.css" />
+        <link rel="stylesheet" href="./assets/css/main.css" />
         <!-- link javascript -->
         <script src="./assets/js/scripts.js"></script>
         <style>
@@ -94,12 +94,12 @@
         </style>
     </head>
     <body>
+        <!-- Header -->
+        <header id="header" class="header"></header>
+        <script>
+            load("#header", "./template/header.html");
+        </script>
         <div class="container">
-            <!-- Header -->
-            <header id="header"></header>
-            <script>
-                load("#header", "./template/header.html");
-            </script>
             <!-- Main -->
             <h1>Contact Page</h1>
             <!-- Footer -->

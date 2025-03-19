@@ -3,7 +3,7 @@
         <!-- more -->
         <button class="top-bar__more">
             <img
-                src="../assets/icons/more.svg"
+                src="./assets/icons/more.svg"
                 alt=""
                 class="icon top-bar__more-icon"
             />
@@ -19,33 +19,40 @@
         </a>
         <!-- navbar -->
         <nav class="navbar">
-            <ul class="navbar__list">
-                <li>
+            <ul class="navbar__list js-dropdown-list">
+                <li class="navbar__item">
                     <a href="" class="navbar__link">
                         Departments
                         <img
                             src="./assets/icons/arrown-down.svg"
                             alt=""
-                            class="icon navbar-arrow"
+                            class="icon navbar__arrow"
                         />
                     </a>
+                    <div class="dropdown">
+                        <div class="dropdown__inner">
+                            <div class="top-menu">
+                                <div class="top-menu__main"></div>
+                            </div>
+                        </div>
+                    </div>
                 </li>
-                <li>
+                <li class="navbar__item">
                     <a href="" class="navbar__link"
                         >Grocery
                         <img
                             src="./assets/icons/arrown-down.svg"
                             alt=""
-                            class="icon navbar-arrow"
+                            class="icon navbar__arrow"
                     /></a>
                 </li>
-                <li>
+                <li class="navbar__item">
                     <a href="" class="navbar__link"
                         >Beauty
                         <img
                             src="./assets/icons/arrown-down.svg"
                             alt=""
-                            class="icon navbar-arrow"
+                            class="icon navbar__arrow"
                     /></a>
                 </li>
             </ul>

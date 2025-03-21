@@ -1,9 +1,10 @@
+@use "../abstracts";
 .dropdown {
     position: absolute;
     left: 0;
     padding-top: 54px;
     width: min(1240px, 100%);
-    // display: none;
+    display: none;
     &__inner {
         --inner-padding: 30px;
         max-height: var(--inner-max-height);
@@ -26,7 +27,7 @@
     --main-column-width: 292px;
     &__main {
         width: var(--main-column-width);
-        max-height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
+        height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
         border-right: 1px solid var(--top-menu-border-color);
         overflow-y: auto;
     }
@@ -34,11 +35,17 @@
 .menu-column {
     display: flex;
     gap: 14px;
+    + .menu-column {
+        margin-top: 18px;
+    }
     &__icon {
         position: relative;
         flex-shrink: 0;
         width: 36px;
         height: 36px;
+        @include abstracts.breakpoint(xl) {
+            display: none;
+        }
     }
     &__content {
         flex: 1;
@@ -46,12 +53,12 @@
     &__icon-1 {
         width: 30px;
         height: 30px;
-        object-fit: cover;
+        object-fit: contain;
     }
     &__icon-2 {
         width: 24px;
         height: 24px;
-        object-fit: cover;
+        object-fit: contain;
         position: absolute;
         right: 0;
         bottom: 0;
@@ -64,20 +71,31 @@
         line-height: 1.5;
     }
     &__list {
-        margin-top: 19px;
+        margin-top: 17px;
+    }
+    &__item {
+        &:hover .sub-menu {
+            display: grid;
+        }
+    }
+    &__item--active > &__link,
+    &__item:hover > &__link {
+        color: #0071dc;
+        font-weight: 500;
     }
     &__link {
         display: block;
         padding: 7px 0;
         font-size: 1.4rem;
         line-height: 1.43;
-        &:hover {
-            color: #0071dc;
-            font-weight: 500;
-        }
     }
 }
 .sub-menu {
     position: absolute;
     inset: 0 0 0 var(--main-column-width);
+    padding-left: var(--inner-padding);
+    display: none;
+    gap: var(--inner-padding);
+    grid-template-columns: repeat(3, 1fr);
+    overflow-y: auto;
 }

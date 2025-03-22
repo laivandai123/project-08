@@ -25,9 +25,10 @@
 .top-menu {
     position: relative;
     --main-column-width: 292px;
+    --max-inner-height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
     &__main {
         width: var(--main-column-width);
-        height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
+        height: var(--max-inner-height);
         border-right: 1px solid var(--top-menu-border-color);
         overflow-y: auto;
     }
@@ -74,7 +75,7 @@
         margin-top: 17px;
     }
     &__item {
-        &:hover .sub-menu {
+        &--active .sub-menu {
             display: grid;
         }
     }
@@ -98,4 +99,12 @@
     gap: var(--inner-padding);
     grid-template-columns: repeat(3, 1fr);
     overflow-y: auto;
+    &--not-main {
+        display: grid;
+        inset: initial;
+        position: initial;
+        grid-template-columns: repeat(4, 1fr);
+        height: var(--max-inner-height);
+        padding-left: 0;
+    }
 }

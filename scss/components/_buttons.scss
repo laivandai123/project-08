@@ -31,3 +31,37 @@
         margin-top: 6px;
     }
 }
+.btn {
+    background: #f8f8fb;
+    height: 46px;
+    font-size: 1.8rem;
+    font-weight: 500;
+    border-radius: 6px;
+    padding: 0 20px;
+    user-select: none;
+    + .btn {
+        margin-left: 20px;
+    }
+    &--text {
+        color: #9e9da8;
+        background: transparent;
+    }
+    &--primary {
+        background: #ffb700;
+    }
+    &[disabled],
+    &--disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+    &--outline {
+        background: transparent;
+        border: 1px solid #d2d1d6;
+    }
+    &--rounded {
+        border-radius: 99px;
+    }
+    &:hover {
+        opacity: 0.9;
+    }
+}

@@ -38,6 +38,9 @@ textarea {
     border: none;
     padding: 0;
 }
+input {
+    background: transparent;
+}
 .icon {
     filter: var(--icon-color);
 }

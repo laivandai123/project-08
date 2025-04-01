@@ -1,0 +1,14 @@
+.auth {
+    display: flex;
+    min-height: 100vh;
+    &__intro,
+    &__content {
+        flex: 1;
+    }
+    &__intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}

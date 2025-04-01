@@ -120,7 +120,7 @@
                 color: #9e9da8;
             }
             @include abstracts.screen(sm) {
-                font-size: 1.6rem;
+                font-size: 1.6rem !important;
             }
         }
         &-input-icon {

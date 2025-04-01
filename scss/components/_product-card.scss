@@ -3,6 +3,13 @@
     border-radius: 20px;
     background: var(--product-card-bg);
     box-shadow: 0px 20px 60px 10px var(--product-card-shadow);
+    // height: 100%;
+    // display: flex;
+    // flex-direction: column;
+
+    // &__col {
+    //     margin-bottom: 30px;
+    // }
     &__img-wrap {
         position: relative;
         padding-top: 100%;
@@ -39,6 +46,7 @@
     &__row {
         display: flex;
         align-items: center;
+        // margin-top: auto;
     }
     &__star {
         margin: 0 6px 0 auto;

@@ -1374,6 +1374,7 @@ html {
   --filter-form-bg: #fff;
   --filter-form-shadow: rgba(200, 200, 200, 0.4);
   --filter-form-tag-bg: #f8f8fb;
+  --auth-content-bg: #fff;
 }
 @media (max-width: 991.98px) {
   html {
@@ -2010,8 +2011,9 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
 }
-.btn + .btn {
+.btn + .btn:not(.btn--no-margin) {
   margin-left: 20px;
 }
 .btn--text {
@@ -2328,6 +2330,52 @@ html {
   }
 }
 
+.form__group {
+  margin-top: 30px;
+}
+.form__group--inline {
+  display: flex;
+  align-items: center;
+}
+.form__text-input {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  border: 1.5px solid #d2d1d6;
+  height: 50px;
+  padding: 0 12px;
+}
+.form__text-input:focus-within {
+  border-color: #77dae6;
+}
+.form__input {
+  height: 100%;
+  flex: 1;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
+.form__input::placeholder {
+  color: #d2d1d6;
+}
+.form__input-icon {
+  margin-left: 12px;
+}
+.form__pull-right {
+  margin-left: auto;
+}
+.form__checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.form__checkbox-label {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 146.667%;
+  color: #9e9da8;
+}
+
 .home__container {
   margin-top: 40px;
 }
@@ -2367,6 +2415,71 @@ html {
 }
 .auth__intro, .auth__content {
   flex: 1;
+}
+.auth__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.auth__intro-text {
+  max-width: 412px;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
+.auth__content {
+  background: var(--auth-content-bg);
+}
+.auth__content-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: min(460px, 100%);
+  margin: 0 auto;
+  padding: 50px 0;
+}
+.auth__heading {
+  margin-top: 50px;
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 146.667%;
+}
+.auth__desc {
+  margin-top: 10px;
+  padding: 0 30px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 146.667%;
+  color: #9e9da8;
+}
+.auth__form {
+  width: 100%;
+  margin-top: 30px;
+}
+.auth__link {
+  color: #0071dc;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 146.667%;
+}
+.auth__btn-group {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.auth__btn {
+  width: 100%;
+}
+.auth__text {
+  margin-top: 108px;
+  color: #9e9da8;
+  font-size: 1.8rem;
+  line-height: 144.444%;
 }
 
 /*# sourceMappingURL=main.css.map */

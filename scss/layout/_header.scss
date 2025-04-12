@@ -19,6 +19,25 @@
         padding: 16px 0;
         justify-content: space-between;
     }
+    &__logo {
+        @include abstracts.screen(lg) {
+            gap: 10px !important;
+            margin-left: 40px;
+            &-tiltle {
+                font-size: 1.8rem !important;
+            }
+            &__img {
+                width: 24px;
+            }
+        }
+        @include abstracts.screen(md) {
+            margin-left: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+        }
+    }
 }
 .navbar {
     margin-left: 129px;

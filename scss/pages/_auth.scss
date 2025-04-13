@@ -31,6 +31,7 @@
             bottom: 50px;
         }
         &-img {
+            width: var(--width);
             max-width: 100%;
         }
         &-text {
@@ -70,6 +71,9 @@
             }
         }
     }
+    &__message {
+        margin-top: 30px;
+    }
     &__heading {
         margin-top: 50px;
         font-size: 3rem;
@@ -97,6 +101,9 @@
         margin-top: 30px;
         @include abstracts.screen(md) {
             margin-top: 0;
+        }
+        &-forgot {
+            margin-top: 10px;
         }
     }
     &__link {

@@ -6,6 +6,7 @@ html {
 
     --body-bg: #f6f6f6;
     --header-bg-color: #eee;
+    --footer-bg-color: var(--header-bg-color);
     --top-act-group-bg-color: #fff;
     --top-act-group-shadow: rgba(237, 237, 246, 0.2);
     --top-act-group-separate: #ededf6;
@@ -45,4 +46,9 @@ html {
     }
     // form
     --form-placeholder-color: #d2d1d6;
+    // product-detail
+    --product-detail-bg: #fff;
+    // breadcrums
+    --breadcrumbs-bg: #f6f6f6;
+    --breadcrumbs-shadow: rgba(237, 237, 246, 0.2);
 }

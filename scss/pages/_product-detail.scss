@@ -54,6 +54,7 @@
     }
 }
 .prod-info {
+    background: #f6f6f6;
     padding: 60px;
     &__heading {
         font-size: 2.6rem;
@@ -62,6 +63,50 @@
     }
     &__label {
         margin-top: 30px;
+    }
+    &__tag {
+        background: #ededf6;
+    }
+    &__card {
+        margin-top: 30px;
+        padding: 20px;
+        border-radius: 6px;
+        border: 1px solid #b9babe;
+    }
+    &__row {
+        display: flex;
+        align-items: center;
+    }
+    &__price {
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 150%;
+    }
+    &__tax {
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%), #67b044;
+        color: var(--Green-Green, #67b044);
+        margin-left: 10px;
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 142.857%;
+        padding: 2px 8px;
+    }
+    &__total-price {
+        margin: 20px 0;
+        font-size: 2.6rem;
+        font-weight: 500;
+        line-height: 138.462%;
+    }
+    &__add-to-cart {
+        flex: 1;
+    }
+    &__like-btn {
+        width: 46px;
+        height: 46px;
+        margin-left: 20px;
+        border-radius: 6px;
+        border: 1px solid #d2d1d6;
+        background: transparent;
     }
 }
 .prod-props {

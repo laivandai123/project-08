@@ -271,6 +271,11 @@
         border-style: solid;
         padding: 20px 0;
     }
+    &__separate {
+        height: 1px;
+        background: var(--header-act-dropdown-border-color);
+        margin: 20px 0;
+    }
     &__list {
         flex-wrap: nowrap;
         overflow-x: auto;

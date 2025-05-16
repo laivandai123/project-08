@@ -38,18 +38,22 @@
     font-weight: 500;
     border-radius: 6px;
     padding: 0 20px;
+    white-space: nowrap;
     user-select: none;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
+    &--small {
+        height: 40px;
+        padding: 0 16px;
+    }
     + .btn {
         &:not(.btn--no-margin) {
             margin-left: 20px;
         }
     }
     &--text {
-        color: #9e9da8;
         background: transparent;
     }
     &--primary {

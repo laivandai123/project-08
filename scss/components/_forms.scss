@@ -49,9 +49,6 @@ $error-color: #ed4337;
         &:focus-within {
             border-color: #77dae6;
         }
-        &--small {
-            padding: 0 8px;
-        }
     }
     &__text-area {
         height: 100px;
@@ -61,6 +58,7 @@ $error-color: #ed4337;
         }
     }
     &__text-input {
+        position: relative;
         display: flex;
         align-items: center;
         border-radius: 10px;
@@ -95,6 +93,59 @@ $error-color: #ed4337;
     &__input {
         &-icon {
             margin-left: 12px;
+        }
+    }
+    &__select-dialog {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        background: #fff;
+        padding: 10px 0;
+        border: 1px solid #d2d1d6;
+        border-radius: 10px;
+        left: 10px;
+        bottom: 44px;
+        min-width: 230px;
+        max-height: 310px;
+        opacity: 0;
+        visibility: hidden;
+        translate: 0 8px;
+        transition: opacity, visibility, translate;
+        transition-duration: 0.2s;
+        &.show {
+            opacity: 1;
+            visibility: visible;
+            translate: 0;
+        }
+    }
+
+    &__search {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #d2d1d6;
+        padding: 0 20px 10px;
+        &-input {
+            flex: 1;
+        }
+        &-icon {
+            width: 16px;
+        }
+    }
+    &__options-list {
+        flex: 1;
+        overflow-y: auto;
+        margin-top: 10px;
+    }
+    &__option {
+        font-size: 1.4rem;
+        padding: 8px 20px;
+        &--current {
+            font-weight: 500;
+            background: rgba($color: #ffb700, $alpha: 0.5);
+        }
+        &:not(&--current):hover {
+            background: #ebebeb;
+            cursor: pointer;
         }
     }
     &__error {

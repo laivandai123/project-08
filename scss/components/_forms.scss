@@ -5,6 +5,13 @@ $error-color: #ed4337;
         opacity: 0.5;
         pointer-events: none;
     }
+    &__row {
+        display: flex;
+        gap: 20px;
+        & > * {
+            flex: 1;
+        }
+    }
     &__group {
         margin-top: 30px;
         @include abstracts.screen(md) {
@@ -28,6 +35,29 @@ $error-color: #ed4337;
             display: none;
         }
     }
+    &__text-area,
+    &__text-input {
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+        border: 1.5px solid #d2d1d6;
+        padding: 0 12px;
+        &:focus-within {
+            border-color: #77dae6;
+        }
+        &--small {
+            padding: 0 8px;
+        }
+    }
+    &__text-area {
+        height: 100px;
+        padding: 12px;
+        &-input {
+            width: 100%;
+
+            resize: none;
+        }
+    }
     &__text-input {
         display: flex;
         align-items: center;
@@ -38,10 +68,14 @@ $error-color: #ed4337;
         &:focus-within {
             border-color: #77dae6;
         }
+        &--small {
+            height: 42px;
+        }
         @include abstracts.screen(md) {
             height: 48px;
         }
     }
+    &__text-area-input,
     &__input {
         height: 100%;
         flex: 1;
@@ -51,11 +85,13 @@ $error-color: #ed4337;
         &::placeholder {
             color: var(--form-placeholder-color);
         }
-        &-icon {
-            margin-left: 12px;
-        }
         @include abstracts.screen(md) {
             font-size: 1.6rem;
+        }
+    }
+    &__input {
+        &-icon {
+            margin-left: 12px;
         }
     }
     &__error {

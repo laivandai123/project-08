@@ -44,7 +44,7 @@ $error-color: #ed4337;
         display: flex;
         align-items: center;
         border-radius: 10px;
-        border: 1.5px solid #d2d1d6;
+        border: 1px solid #d2d1d6;
         padding: 0 12px;
         &:focus-within {
             border-color: #77dae6;
@@ -62,7 +62,7 @@ $error-color: #ed4337;
         display: flex;
         align-items: center;
         border-radius: 10px;
-        border: 1.5px solid #d2d1d6;
+        border: 1px solid #d2d1d6;
         height: 50px;
         padding: 0 12px;
         &:focus-within {
@@ -242,7 +242,7 @@ $error-color: #ed4337;
             width: 19px;
             height: 19px;
             border-radius: 5px;
-            border: 1.5px solid #9e9da8;
+            border: 1px solid #9e9da8;
         }
     }
     &__checkbox:has(:checked) {

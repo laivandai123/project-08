@@ -26,10 +26,17 @@
     &__form {
         margin-bottom: 30px;
     }
+    &__form-row {
+        @include abstracts.screen(sm) {
+            flex-direction: row;
+            gap: 20px;
+        }
+    }
     &__top {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        gap: 30px;
     }
     &__heading {
         font-size: 2.4rem;
@@ -364,7 +371,10 @@
     margin-top: 30px;
     padding: 20px;
     border-radius: 20px;
-    background: #f6f6f6;
+    background: var(--checkout-payment-item-bg);
+    @include abstracts.screen(sm) {
+        align-items: flex-start;
+    }
     &__pointer {
         cursor: pointer;
     }
@@ -374,6 +384,17 @@
         object-fit: cover;
     }
     &__content {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex: 1;
+        @include abstracts.screen(sm) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+        }
+    }
+    &__info {
         flex: 1;
     }
     &__title {

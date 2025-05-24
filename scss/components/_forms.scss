@@ -131,14 +131,14 @@ $error-color: #ed4337;
         font-size: 1.8rem;
         font-weight: 600;
         text-align: center;
-        padding: 14px;
+        padding: 20px;
     }
     &__close-dialog {
         position: absolute;
         top: 0;
         right: 0;
         font-size: 3rem;
-        padding: 2px 18px;
+        padding: 12px 18px;
         opacity: 0.8;
         &:hover {
             opacity: 1;
@@ -152,10 +152,13 @@ $error-color: #ed4337;
         border-bottom: 1px solid #d2d1d6;
         padding: 0 20px;
         @include abstracts.screen(lg) {
-            height: 42px;
+            height: 48px;
+            &-icon {
+                width: 20px;
+            }
         }
         @include abstracts.screen(sm) {
-            margin: 10px 20px 0;
+            margin: 10px 30px 0;
             border: 1px solid #d2d1d6;
             border-radius: 10px;
             padding: 0 14px;
@@ -175,6 +178,9 @@ $error-color: #ed4337;
         overflow-y: auto;
         margin-top: 10px;
         overscroll-behavior: contain;
+        @supports (-webkit-touch-callout: none) {
+            padding-bottom: 300px;
+        }
     }
     &__option {
         font-size: 1.4rem;
@@ -188,7 +194,8 @@ $error-color: #ed4337;
             cursor: pointer;
         }
         @include abstracts.screen(lg) {
-            padding: 14px 20px;
+            padding: 18px 30px;
+            font-size: 1.6rem;
         }
     }
     &__error {

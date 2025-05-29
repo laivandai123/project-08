@@ -207,6 +207,20 @@
         height: 50px;
         cursor: pointer;
     }
+    &__user {
+        position: relative;
+        &:hover .act-dropdown {
+            display: block;
+        }
+    }
+    &__dropdown {
+        right: -15px !important;
+        // display: block !important;
+        width: min(300px, 100vw) !important;
+    }
+    &__dropdown-arrow {
+        right: 15px !important;
+    }
 }
 .nav-btn {
     align-items: center;
@@ -333,5 +347,42 @@
         font-size: 1.5rem;
         font-weight: 500;
         line-height: 146.667%;
+    }
+}
+.user-menu {
+    &__top {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    &__avatar {
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+    &__name {
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+    &__list {
+        margin-top: 30px;
+    }
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 12px 0;
+    }
+    &__separate {
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px solid var(--separate-bg);
+    }
+    &__icon {
+        width: 18px;
+        height: 18px;
     }
 }

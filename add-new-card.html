@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Profile | Grocery Mart</title>
+        <title>Add new card | Grocery Mart</title>
         <!-- link favicon -->
         <link rel="apple-touch-icon" sizes="57x57" href="./assets/favicon/apple-icon-57x57.png" />
         <link rel="apple-touch-icon" sizes="60x60" href="./assets/favicon/apple-icon-60x60.png" />
@@ -199,175 +199,186 @@
                         <div class="col-9 col-xl-8 col-lg-7 col-md-12">
                             <div class="cart-info">
                                 <div class="row gy-3">
-                                    <!-- My Wallet -->
                                     <div class="col-12">
-                                        <h2 class="cart-info__heading">My Wallet</h2>
-                                        <p class="cart-info__desc profile__desc">Payment methods</p>
-                                        <div class="row gy-md-2 row-cols-3 row-cols-xl-2 row-cols-lg-1">
-                                            <!-- payment card 1 -->
-                                            <div class="col">
-                                                <article class="payment-card" style="--bg-color: #1e2e69">
-                                                    <img
-                                                        src="./assets/img/card/plane-bg.svg"
-                                                        alt=""
-                                                        class="payment-card__img"
-                                                    />
-
-                                                    <div class="payment-card__top">
-                                                        <img
-                                                            src="./assets/img/card/plane.svg"
-                                                            alt=""
-                                                            class="payment-card__icon"
+                                        <h2 class="cart-info__heading">
+                                            <a href="./profile.html">
+                                                <img
+                                                    src="./assets/icons/arrown-left.svg"
+                                                    alt=""
+                                                    class="cart-info__back-arrow icon"
+                                                />
+                                            </a>
+                                            Add credit or debit card
+                                        </h2>
+                                        <form action="./profile.html" class="form form-card">
+                                            <!-- form row 1 -->
+                                            <div class="form__row">
+                                                <div class="form__group">
+                                                    <label for="first-name" class="form__label form-card__label"
+                                                        >First Name</label
+                                                    >
+                                                    <div class="form__text-input">
+                                                        <input
+                                                            type="text"
+                                                            name=""
+                                                            id="first-name"
+                                                            placeholder="First name"
+                                                            class="form__input"
+                                                            value=""
+                                                            required
+                                                            autofocus
                                                         />
-                                                        <span class="payment-card__type">FeatherCard</span>
-                                                    </div>
-                                                    <div class="payment-card__number">1234 4567 8901 2221</div>
-                                                    <div class="payment-card__bottom">
-                                                        <div>
-                                                            <p class="payment-card__label">Card Holder</p>
-                                                            <p class="payment-card__value">Imran Khan</p>
-                                                        </div>
-                                                        <div class="payment-card__expired">
-                                                            <p class="payment-card__label">Expired</p>
-                                                            <p class="payment-card__value">10/22</p>
-                                                        </div>
-                                                        <div class="payment-card__circle">
-                                                            <img src="./assets/img/card/oval.svg" alt="" />
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                            </div>
-                                            <!-- payment card 2 -->
-                                            <div class="col">
-                                                <article class="payment-card" style="--bg-color: #354151">
-                                                    <img
-                                                        src="./assets/img/card/leaf-bg.svg"
-                                                        alt=""
-                                                        class="payment-card__img"
-                                                    />
 
-                                                    <div class="payment-card__top">
                                                         <img
-                                                            src="./assets/img/card/leaf.svg"
+                                                            src="./assets/icons/form-error.svg"
                                                             alt=""
-                                                            class="payment-card__icon"
+                                                            class="form__input--icon-error form__error-icon"
                                                         />
-                                                        <span class="payment-card__type">FeatherCard</span>
                                                     </div>
-                                                    <div class="payment-card__number">1234 4567 8901 2221</div>
-                                                    <div class="payment-card__bottom">
-                                                        <div>
-                                                            <p class="payment-card__label">Card Holder</p>
-                                                            <p class="payment-card__value">Imran Khan</p>
-                                                        </div>
-                                                        <div class="payment-card__expired">
-                                                            <p class="payment-card__label">Expired</p>
-                                                            <p class="payment-card__value">11/22</p>
-                                                        </div>
-                                                        <div class="payment-card__circle">
-                                                            <img src="./assets/img/card/oval.svg" alt="" />
-                                                        </div>
+                                                    <p class="form__error">First name is not in correct format</p>
+                                                </div>
+                                                <div class="form__group">
+                                                    <label for="last-name" class="form__label form-card__label"
+                                                        >Last Name</label
+                                                    >
+                                                    <div class="form__text-input">
+                                                        <input
+                                                            type="text"
+                                                            name=""
+                                                            id="last-name"
+                                                            placeholder="Last name"
+                                                            class="form__input"
+                                                            value=""
+                                                            required
+                                                        />
+
+                                                        <img
+                                                            src="./assets/icons/form-error.svg"
+                                                            alt=""
+                                                            class="form__input--icon-error form__error-icon"
+                                                        />
                                                     </div>
-                                                </article>
-                                            </div>
-                                            <!-- add new payment card -->
-                                            <div class="col">
-                                                <a href="./add-new-card.html" class="new-card">
-                                                    <img
-                                                        src="./assets/icons/plus.svg"
-                                                        alt=""
-                                                        class="new-card__icon icon"
-                                                    />
-                                                    <p class="new-card__text">Add New Card</p>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Account info -->
-                                    <div class="col-12">
-                                        <h2 class="cart-info__heading">Account info</h2>
-                                        <p class="cart-info__desc profile__desc">
-                                            Addresses, contact information and password
-                                        </p>
-                                        <div class="row gy-md-2 row-cols-2 row-cols-lg-1">
-                                            <!-- account info 1 -->
-                                            <div class="col">
-                                                <article class="account-info">
-                                                    <div class="account-info__icon">
-                                                        <img src="./assets/icons/mail.svg" alt="" class="icon" />
-                                                    </div>
-                                                    <div>
-                                                        <h3 class="account-info__title">Email Address</h3>
-                                                        <p class="account-info__desc">tarek97.ta@gmail.com</p>
-                                                    </div>
-                                                </article>
-                                            </div>
-                                            <!-- account info 2 -->
-                                            <div class="col">
-                                                <article class="account-info">
-                                                    <div class="account-info__icon">
-                                                        <img src="./assets/icons/phone.svg" alt="" class="icon" />
-                                                    </div>
-                                                    <div>
-                                                        <h3 class="account-info__title">Phone number</h3>
-                                                        <p class="account-info__desc">+000 11122 2345 657</p>
-                                                    </div>
-                                                </article>
-                                            </div>
-                                            <!-- account info 3 -->
-                                            <div class="col">
-                                                <article class="account-info">
-                                                    <div class="account-info__icon">
-                                                        <img src="./assets/icons/map.svg" alt="" class="icon" />
-                                                    </div>
-                                                    <div>
-                                                        <h3 class="account-info__title">Add an address</h3>
-                                                        <p class="account-info__desc">
-                                                            Bangladesh Embassy, Washington, DC 20008
-                                                        </p>
-                                                    </div>
-                                                </article>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <h2 class="cart-info__heading">Lists</h2>
-                                        <p class="cart-info__desc profile__desc">2 items - Primary</p>
-                                        <!-- favourite item 1 -->
-                                        <article class="favourite-item">
-                                            <img
-                                                src="./assets/img/product/item1.png"
-                                                alt=""
-                                                class="favourite-item__thumb"
-                                            />
-                                            <div>
-                                                <h3 class="favourite-item__title">
-                                                    Coffee Beans - Espresso Arabica and Robusta Beans
-                                                </h3>
-                                                <div class="favourite-item__content">
-                                                    <span class="favourite-item__price">$47.00</span>
-                                                    <button class="btn btn--primary btn--rounded">Add to cart</button>
+                                                    <p class="form__error">Last name is not in correct format</p>
                                                 </div>
                                             </div>
-                                        </article>
-                                        <div class="separate" style="--margin: 20px"></div>
-                                        <!-- favourite item 2 -->
-                                        <article class="favourite-item">
-                                            <img
-                                                src="./assets/img/product/item2.png"
-                                                alt=""
-                                                class="favourite-item__thumb"
-                                            />
-                                            <div>
-                                                <h3 class="favourite-item__title">
-                                                    Lavazza Coffee Blends - Try the Italian Espresso
-                                                </h3>
-                                                <div class="favourite-item__content">
-                                                    <span class="favourite-item__price">$53.00</span>
-                                                    <button class="btn btn--primary btn--rounded">Add to cart</button>
+                                            <!-- form row 2 -->
+                                            <div class="form__row">
+                                                <div class="form__group">
+                                                    <label for="card-number" class="form__label form-card__label"
+                                                        >Card Number</label
+                                                    >
+                                                    <div class="form__text-input">
+                                                        <input
+                                                            type="number"
+                                                            name=""
+                                                            id="card-number"
+                                                            placeholder="Card Number"
+                                                            class="form__input"
+                                                            value=""
+                                                            required
+                                                        />
+
+                                                        <img
+                                                            src="./assets/icons/form-error.svg"
+                                                            alt=""
+                                                            class="form__input--icon-error form__error-icon"
+                                                        />
+                                                    </div>
+                                                    <p class="form__error">Card number is not in correct format</p>
+                                                </div>
+                                                <div class="form__group">
+                                                    <label for="expiration-date" class="form__label form-card__label"
+                                                        >Expiration Date</label
+                                                    >
+                                                    <div class="form__text-input">
+                                                        <input
+                                                            type="date"
+                                                            name=""
+                                                            id="expiration-date"
+                                                            placeholder="MM/YY"
+                                                            class="form__input"
+                                                            value=""
+                                                            required
+                                                        />
+
+                                                        <img
+                                                            src="./assets/icons/form-error.svg"
+                                                            alt=""
+                                                            class="form__input--icon-error form__error-icon"
+                                                        />
+                                                    </div>
+                                                    <p class="form__error">Expiration date is not in correct format</p>
                                                 </div>
                                             </div>
-                                        </article>
+                                            <!-- form row 3 -->
+                                            <div class="form__row">
+                                                <div class="form__group">
+                                                    <label for="card-cvv" class="form__label form-card__label"
+                                                        >CVV</label
+                                                    >
+                                                    <div class="form__text-input">
+                                                        <input
+                                                            type="number"
+                                                            name=""
+                                                            id="card-cvv"
+                                                            placeholder="123"
+                                                            class="form__input"
+                                                            value=""
+                                                            required
+                                                        />
+
+                                                        <img
+                                                            src="./assets/icons/form-error.svg"
+                                                            alt=""
+                                                            class="form__input--icon-error form__error-icon"
+                                                        />
+                                                    </div>
+                                                    <p class="form__error">Card cvv is not in correct format</p>
+                                                </div>
+                                                <div class="form__group">
+                                                    <label for="phone-number" class="form__label form-card__label"
+                                                        >Phone Number</label
+                                                    >
+                                                    <div class="form__text-input">
+                                                        <input
+                                                            type="number"
+                                                            name=""
+                                                            id="phone-number"
+                                                            placeholder="017"
+                                                            class="form__input"
+                                                            value=""
+                                                            required
+                                                        />
+
+                                                        <img
+                                                            src="./assets/icons/form-error.svg"
+                                                            alt=""
+                                                            class="form__input--icon-error form__error-icon"
+                                                        />
+                                                    </div>
+                                                    <p class="form__error">Phone number is not in correct format</p>
+                                                </div>
+                                            </div>
+                                            <div class="form__group">
+                                                <label for="set-default-card" class="form__label form-card__label"
+                                                    >Card Preferences</label
+                                                >
+                                                <label class="form__checkbox">
+                                                    <input
+                                                        type="checkbox"
+                                                        name=""
+                                                        id="set-default-card"
+                                                        checked
+                                                        class="form__checkbox-input d-none"
+                                                    />
+                                                    <span class="form__checkbox-label">Set as default card</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-card__bottom">
+                                                <a href="./profile.html" class="btn btn--text">Cancel</a>
+                                                <button class="btn btn--primary btn--rounded">Save card</button>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
